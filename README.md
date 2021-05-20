@@ -1,4 +1,4 @@
-# project_purple_cow2
+# project_purple_cow
 
 ## Project setup
 ```
