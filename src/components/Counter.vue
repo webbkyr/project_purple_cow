@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>{{ message }}</span>
+    <span class="counter_message">{{ message }}</span>
     <custom-button text="Increment me!" @clickHandler="makeCountRequest" />
   </div>
 </template>
@@ -24,10 +24,9 @@ export default class Counter extends Vue {
 
   get message() {
     const isSingleView = this.count === 1;
-    return `
-      This counter has been clicked ${this.count} 
-      ${isSingleView ? "time." : "times."}
-    `;
+    return `This counter has been clicked ${this.count} ${
+      isSingleView ? "time." : "times."
+    }`;
   }
 
   async makeCountRequest(): Promise<void> {
@@ -37,4 +36,8 @@ export default class Counter extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.counter_message {
+  font-size: 16px;
+}
+</style>

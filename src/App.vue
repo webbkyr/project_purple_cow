@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-    <div>Foo</div>
+    <h1 class="main_header">{{ header }}</h1>
+    <div v-if="loading">Loading...</div>
+    <counter v-else :count="this.totalCount" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import Counter from "@/components/Counter.vue";
 
 @Component({
   components: {
-    HelloWorld
+    Counter
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  public header = "Project Purple Cow";
+}
 </script>
 
 <style>
@@ -26,5 +28,9 @@ export default class App extends Vue {}
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.main_header {
+  color: #941ef4;
 }
 </style>
