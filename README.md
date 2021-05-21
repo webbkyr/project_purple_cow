@@ -16,5 +16,3 @@ npm run serve
 docker build -t project-purple .
 docker run -p 3000:80 project-purple
 ```
-
-docker run -p 4000:80 project-purple
