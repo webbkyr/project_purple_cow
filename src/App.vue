@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <h1 class="main_header">{{ header }}</h1>
-    <div v-if="loading">Loading...</div>
-    <counter v-else :count="this.totalCount" />
+    <counter />
   </div>
 </template>
 
