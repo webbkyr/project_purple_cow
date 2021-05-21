@@ -1,4 +1,4 @@
-# builder stage to build the front end assets
+# stage to build front end assets
 FROM node:14-alpine AS builder
 
 WORKDIR /app

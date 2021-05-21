@@ -10,17 +10,11 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Running as a production Docker container
+
 ```
-npm run build
+docker build -t project-purple .
+docker run -p 3000:80 project-purple
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
+docker run -p 4000:80 project-purple
